@@ -11,6 +11,10 @@
   margin-left: 72px;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .logotext {
   color: #dc3e22;
   font-size: 24px;
@@ -20,6 +24,10 @@
 .static {
   display: flex;
   align-items: center;
+}
+
+.static:hover {
+  cursor: pointer;
 }
 
 .staticText {

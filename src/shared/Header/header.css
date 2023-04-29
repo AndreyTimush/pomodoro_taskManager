@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 72px;
+}
+
+.logotext {
+  color: #dc3e22;
+  font-size: 24px;
+  margin-left: 13px;
+}
+
+.static {
+  display: flex;
+  align-items: center;
+}
+
+.staticText {
+  margin-right: 80px;
+  margin-left: 5px;
+  color: #dc3e22;
+}

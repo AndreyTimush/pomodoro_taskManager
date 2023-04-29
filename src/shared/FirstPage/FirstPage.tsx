@@ -1,11 +1,15 @@
 import React from "react";
-import styles from "./firstpage.css";
+import "./firstpage.css";
 import { Header } from "../Header";
+import { DescriptionSteps } from "../DescriptionSteps";
 
 export function FirstPage() {
   return (
     <>
-      <Header />
+      <div className="mainPage">
+        <Header />
+        <DescriptionSteps />
+      </div>
     </>
   );
 }

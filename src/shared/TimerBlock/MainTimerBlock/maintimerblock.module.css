@@ -1,0 +1,82 @@
+.mainmenu {
+  height: 452px;
+  background-color: var(--bgc);
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+.timerNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 150px;
+  font-weight: 200;
+  background-color: var(--orange);
+}
+
+.timerNumber p {
+  margin: 0;
+  padding: 0;
+  margin-right: 25px;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+}
+
+.nameTask {
+  color: var(--lightGrey);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  user-select: none;
+}
+
+.button {
+  width: 145px;
+  height: 55px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start:hover {
+  cursor: pointer;
+}
+
+.start {
+  margin-right: 25px;
+  background-color: var(--lightGreen);
+  border: none;
+  color: var(--white);
+}
+
+.start:active {
+  background-color: var(--darkGreen);
+}
+
+.stop {
+  color: var(--lightGrey);
+  border: 2px solid var(--lightGrey);
+}
+
+.addTime {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTime:hover {
+  cursor: pointer;
+}

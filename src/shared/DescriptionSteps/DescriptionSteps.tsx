@@ -1,11 +1,31 @@
-import React from "react";
-import "./descriptionsteps.css";
+import React, { useState } from "react";
+import styles from "./descriptionsteps.module.css";
+import { useDispatch } from "react-redux";
+import { store } from "App";
+import { TasksList } from "./TasksList";
 
 export function DescriptionSteps() {
+  const [inputValue, setInputValue] = useState("");
+  const [idCounter, setIdCounter] = useState(0);
+
+  const handleClick = () => {
+    store.dispatch({
+      type: "ADD_TASK",
+      payload: { id: idCounter, description: inputValue },
+    });
+
+    setIdCounter(idCounter + 1);
+    setInputValue("");
+  };
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
   return (
-    <div>
-      <p className="h11">Ура! Теперь можно начать работать:</p>
-      <ul className="list">
+    <div className={styles.description}>
+      <p className={styles.startMessage}>Ура! Теперь можно начать работать:</p>
+      <ul className={styles.list}>
         <li>Выберите категорию и напишите название текущей задачи</li>
         <li>Запустите таймер («помидор»)</li>
         <li>Работайте пока «помидор» не прозвонит</li>
@@ -16,15 +36,21 @@ export function DescriptionSteps() {
         </li>
       </ul>
       <form>
-        <input placeholder="Название задачи"></input>
-        <button placeholder="Добавить">Добавить</button>
+        <input
+          className={styles.input}
+          placeholder="Название задачи"
+          onChange={handleChange}
+          value={inputValue}
+        />
+        <div
+          className={styles.buttonAdd}
+          placeholder="Добавить"
+          onClick={handleClick}
+        >
+          <p>Добавить</p>
+        </div>
       </form>
+      <TasksList />
     </div>
   );
 }
-
-// Выберите категорию и напишите название текущей задачи
-// Запустите таймер («помидор»)
-// Работайте пока «помидор» не прозвонит
-// Сделайте короткий перерыв (3-5 минут)
-// Продолжайте работать «помидор» за «помидором», пока задача не будут выполнена. Каждые 4 «помидора» делайте длинный перерыв (15-30 минут).

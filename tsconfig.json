@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "checkJs": true,
     "jsx": "react",
     "module": "esnext",
     "target": "esnext",
@@ -8,8 +10,7 @@
     "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "allowJs": true,
-    "baseUrl": "."
+    "allowJs": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "build"]

@@ -1,0 +1,47 @@
+.h11 {
+  font-size: 24px;
+}
+
+.list {
+  font-size: 16px;
+  line-height: 33px;
+  font-weight: 400;
+}
+
+.buttonAdd {
+  background-color: var(--lightGreen);
+  width: 173px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  color: var(--white);
+}
+
+.buttonAdd:hover {
+  cursor: pointer;
+}
+
+.buttonAdd:active {
+  background-color: var(--darkGreen);
+}
+
+.description {
+  margin-right: 16px;
+  flex: 1;
+}
+
+.startMessage {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.input {
+  width: 370px;
+  height: 55px;
+  background-color: var(--bgc);
+  border: none;
+  padding: 15px 0 15px 19px;
+  font-size: 16px;
+}

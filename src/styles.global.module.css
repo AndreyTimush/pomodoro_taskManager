@@ -1,0 +1,25 @@
+:root {
+  --lightGreen: #a8b64f;
+  --darkGreen: #899441;
+  --grey: #c4c4c4;
+  --red: #dc3e22;
+  --lightGrey: #999999;
+  --black: #333333;
+  --white: white;
+  --bgc: #f4f4f4;
+  --darkgrey: #999999;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "SF UI Display";
+}
+
+ul li::marker {
+  color: #b7280f;
+}

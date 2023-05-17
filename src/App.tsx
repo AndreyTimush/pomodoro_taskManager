@@ -4,9 +4,9 @@ import "./styles.global.module.css";
 import { FirstPage } from "./shared/FirstPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createStore } from "redux";
-import { reducer } from "store/reducer";
+import { rootReducer } from "store/store";
 
-export const store = createStore(reducer);
+export const store = createStore(rootReducer);
 
 function App() {
   return (

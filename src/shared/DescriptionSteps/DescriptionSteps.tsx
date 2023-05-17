@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import styles from "./descriptionsteps.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { store } from "App";
 import { TasksList } from "./TasksList";
+import { RootState, addTaskAction } from "store/store";
 
 export function DescriptionSteps() {
   const [inputValue, setInputValue] = useState("");
   const [idCounter, setIdCounter] = useState(0);
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    store.dispatch({
-      type: "ADD_TASK",
-      payload: { id: idCounter, description: inputValue },
-    });
+    inputValue &&
+      dispatch(addTaskAction({ id: idCounter, description: inputValue }));
 
     setIdCounter(idCounter + 1);
     setInputValue("");

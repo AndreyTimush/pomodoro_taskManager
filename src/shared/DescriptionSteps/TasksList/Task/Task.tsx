@@ -5,6 +5,7 @@ import { Menu } from "shared/images/Menu";
 interface ITaskProps {
   id: number;
   description: string;
+  count_pomodoros: number;
 }
 
 export function Task(props: ITaskProps) {
@@ -15,7 +16,7 @@ export function Task(props: ITaskProps) {
       <div className={styles.task}>
         <div className={styles.timeAndName}>
           <div className={styles.radius}>
-            <p>1</p>
+            <p>{props.count_pomodoros}</p>
           </div>
           {<p>{props.description}</p>}
         </div>

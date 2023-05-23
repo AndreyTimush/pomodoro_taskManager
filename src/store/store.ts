@@ -3,10 +3,15 @@ import { ActionCreator, AnyAction, Reducer } from "redux";
 export interface ITask {
   id: number;
   description: string;
+  count_pomodoros: number;
 }
 
 export interface ITasks {
   tasks: ITask[];
+}
+
+export interface IOpenDropdown {
+  flagOpen: boolean;
 }
 
 export type RootState = {

@@ -12,7 +12,12 @@ export function TasksList() {
   return (
     <>
       {tasks.map((task: ITask) => (
-        <Task key={task.id} id={task.id} description={task.description} />
+        <Task
+          key={task.id}
+          id={task.id}
+          description={task.description}
+          count_pomodoros={task.count_pomodoros}
+        />
       ))}
     </>
   );

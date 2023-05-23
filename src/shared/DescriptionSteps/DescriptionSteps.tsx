@@ -12,7 +12,13 @@ export function DescriptionSteps() {
 
   const handleClick = () => {
     inputValue &&
-      dispatch(addTaskAction({ id: idCounter, description: inputValue }));
+      dispatch(
+        addTaskAction({
+          id: idCounter,
+          description: inputValue,
+          count_pomodoros: 1,
+        })
+      );
 
     setIdCounter(idCounter + 1);
     setInputValue("");

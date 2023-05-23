@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./task.module.css";
 import { Menu } from "shared/images/Menu";
+import { Dropdown } from "components/Dropdown";
 
 interface ITaskProps {
   id: number;
@@ -9,8 +10,6 @@ interface ITaskProps {
 }
 
 export function Task(props: ITaskProps) {
-  const handleOpenMenu = () => {};
-
   return (
     <div className={styles.main}>
       <div className={styles.task}>
@@ -20,9 +19,14 @@ export function Task(props: ITaskProps) {
           </div>
           {<p>{props.description}</p>}
         </div>
-        <div className={styles.menuButton} onClick={handleOpenMenu}>
-          <Menu />
-        </div>
+        <Dropdown button={<Menu />}>
+          <ul>
+            <li>Увеличить</li>
+            <li>Уменьшить</li>
+            <li>Редактировать</li>
+            <li>Удалить</li>
+          </ul>
+        </Dropdown>
       </div>
       <hr className={styles.hr} />
     </div>

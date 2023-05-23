@@ -1,6 +1,7 @@
 .main {
   width: 370px;
 }
+
 .hr {
   width: 370px;
   text-align: left;
@@ -34,4 +35,8 @@
 
 .menuButton:hover {
   cursor: pointer;
+}
+
+.menuButton {
+  position: absolute;
 }

@@ -7,6 +7,7 @@ import { RootState, addTaskAction } from "store/store";
 
 export function DescriptionSteps() {
   const [inputValue, setInputValue] = useState("");
+
   const [idCounter, setIdCounter] = useState(0);
   const dispatch = useDispatch();
 

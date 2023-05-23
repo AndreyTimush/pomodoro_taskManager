@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./task.module.css";
 import { Menu } from "shared/images/Menu";
 import { Dropdown } from "components/Dropdown";
+import { ListDropdown } from "components/Dropdown/ListDropdown";
 
 interface ITaskProps {
   id: number;
@@ -20,12 +21,7 @@ export function Task(props: ITaskProps) {
           {<p>{props.description}</p>}
         </div>
         <Dropdown button={<Menu />}>
-          <ul>
-            <li>Увеличить</li>
-            <li>Уменьшить</li>
-            <li>Редактировать</li>
-            <li>Удалить</li>
-          </ul>
+          <ListDropdown />
         </Dropdown>
       </div>
       <hr className={styles.hr} />
